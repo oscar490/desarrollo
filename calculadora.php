@@ -1,4 +1,4 @@
-<?php  
+<?php
 
 
 function calculadora(string $operacion, int $num1, int $num2) : int
@@ -14,7 +14,7 @@ function calculadora(string $operacion, int $num1, int $num2) : int
                 $resultado = $num1 - $num2;
                 break;
 
-              case 'multi':
+              case 'multiplicacion':
                 $resultado = $num1 * $num2;
                 break;
 
@@ -26,4 +26,10 @@ function calculadora(string $operacion, int $num1, int $num2) : int
             return $resultado;
     }
 
-    echo calculadora('multi', 12, 6) . PHP_EOL;
+
+    $operacion = $argv[1];
+    $num1 = $argv[2];
+    $num2 = $argv[3];
+
+
+    echo calculadora($operacion, $num1, $num2) . PHP_EOL;
