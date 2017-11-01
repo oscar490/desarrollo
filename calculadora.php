@@ -1,7 +1,7 @@
 <?php
 
 
-function calculadora(string $operacion, int $num1, int $num2) : int
+function calculadora(string $operacion, int $num1, int $num2)
     {
             $resultado = 0;
 
@@ -31,5 +31,10 @@ function calculadora(string $operacion, int $num1, int $num2) : int
     $num1 = $argv[2];
     $num2 = $argv[3];
 
+    $valor = calculadora($operacion, $num1, $num2);
 
-    echo calculadora($operacion, $num1, $num2) . PHP_EOL;
+    if ( $valor == null) {
+      echo 'Sintaxis: \'operacion\' numero1 numero2' . PHP_EOL;
+    } else {
+      echo $valor . PHP_EOL;
+    }
